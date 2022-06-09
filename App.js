@@ -48,8 +48,6 @@ export default function App() {
     return (
       <View onLayout={onLayoutRootView}>
         <Home></Home>
-        {/* <Text style={{ fontFamily: 'Poppins-Bold', fontSize: 48 }}>Fontsssss</Text>
-        <Text style={{ fontSize: 48 }}>Fontsssss</Text> */}
       </View>
     )
   }
