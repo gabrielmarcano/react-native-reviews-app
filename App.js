@@ -1,8 +1,8 @@
+import 'react-native-gesture-handler';
 import React, { useCallback, useEffect, useState } from 'react';
-import { Text, View } from 'react-native';
 import * as SplashScreen from 'expo-splash-screen';
 import * as Font from 'expo-font';
-import Home from './screens/Home';
+import Navigator from './routes/HomeStack';
 
 export default function App() {
   const [fontsLoaded, setFontsLoaded] = useState(false)
@@ -46,10 +46,7 @@ export default function App() {
     return null;
   } else {
     return (
-      <View onLayout={onLayoutRootView}>
-        <Home></Home>
-      </View>
+      <Navigator onReady={onLayoutRootView}/>
     )
   }
-
 }
