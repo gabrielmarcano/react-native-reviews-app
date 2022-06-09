@@ -5,6 +5,7 @@ import * as Font from 'expo-font';
 import Navigator from './routes/HomeStack';
 
 export default function App() {
+
   const [fontsLoaded, setFontsLoaded] = useState(false)
 
   useEffect(() => {
@@ -44,9 +45,9 @@ export default function App() {
 
   if (!fontsLoaded) {
     return null;
-  } else {
-    return (
-      <Navigator onReady={onLayoutRootView}/>
-    )
   }
+
+  return (
+    <Navigator asyncFunc={onLayoutRootView}/>
+  )
 }
